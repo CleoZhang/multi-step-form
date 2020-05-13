@@ -14,7 +14,8 @@ import {
 export class FormUserDetails extends Component {
   continue = e => {
     e.preventDefault();
-    // Connect to the api that the data suppose to be submitted to //
+    // 1. Connect to the api that the data suppose to be submitted to //
+    // 2. May embed the email notification wiring here as well, basing on the submission result from #1 //
     this.props.nextStep(this.props);
   };
 
@@ -75,7 +76,9 @@ export class FormUserDetails extends Component {
               color: '#fff',
             }}
             onClick={this.continue}
-          ></Button>
+          >
+            Submit
+          </Button>
         </Fragment>
       </MuiThemeProvider>
     );

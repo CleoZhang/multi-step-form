@@ -77,15 +77,7 @@ class UserForm extends Component {
           />
         );
       case 4:
-        return (
-          <Success
-            step={step}
-            nextStep={this.nextStep}
-            prevStep={this.prevStep}
-            handleChange={this.handleChange}
-            values={values}
-          />
-        );
+        return <Success step={step} prevStep={this.prevStep} values={values} />;
       default:
         return null;
     }
