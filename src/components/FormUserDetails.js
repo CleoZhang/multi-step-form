@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
-import { createMuiTheme } from '@material-ui/core/styles';
+import {
+  createMuiTheme,
+  ThemeProvider as MuiThemeProvider,
+} from '@material-ui/core/styles';
 import { AppBar, TextField, Button } from '@material-ui/core';
 
 export class FormUserDetails extends Component {
@@ -14,7 +16,7 @@ export class FormUserDetails extends Component {
     const theme = createMuiTheme();
 
     return (
-      <MuiThemeProvider>
+      <MuiThemeProvider theme={theme}>
         <Fragment>
           <AppBar position='static'>
             <h3>Enter User Details</h3>
@@ -42,7 +44,6 @@ export class FormUserDetails extends Component {
           <br />
           <Button
             variant='contained'
-            primary={true}
             style={{
               margin: theme.spacing(2, 1),
               backgroundColor: theme.palette.primary.main,

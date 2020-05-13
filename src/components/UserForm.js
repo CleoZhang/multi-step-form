@@ -62,6 +62,7 @@ class UserForm extends Component {
           <FormPersonalDetails
             step={step}
             nextStep={this.nextStep}
+            prevStep={this.prevStep}
             handleChange={this.handleChange}
             values={values}
           />
@@ -71,7 +72,7 @@ class UserForm extends Component {
           <Confirm
             step={step}
             nextStep={this.nextStep}
-            handleChange={this.handleChange}
+            prevStep={this.prevStep}
             values={values}
           />
         );
@@ -80,6 +81,7 @@ class UserForm extends Component {
           <Success
             step={step}
             nextStep={this.nextStep}
+            prevStep={this.prevStep}
             handleChange={this.handleChange}
             values={values}
           />
