@@ -44,17 +44,39 @@ class UserForm extends Component {
       case 1:
         return (
           <FormUserDetails
+            step={step}
             nextStep={this.nextStep}
             handleChange={this.handleChange}
             values={values}
           />
         );
       case 2:
-        return <FormPersonalDetails />;
+        return (
+          <FormPersonalDetails
+            step={step}
+            nextStep={this.nextStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
       case 3:
-        return <Confirm />;
+        return (
+          <Confirm
+            step={step}
+            nextStep={this.nextStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
       case 4:
-        return <Success />;
+        return (
+          <Success
+            step={step}
+            nextStep={this.nextStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
       default:
         return null;
     }

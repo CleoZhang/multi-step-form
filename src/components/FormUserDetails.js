@@ -6,7 +6,7 @@ import { AppBar, TextField, Button } from '@material-ui/core';
 export class FormUserDetails extends Component {
   continue = e => {
     e.preventDefault();
-    this.props.nextStep();
+    this.props.nextStep(this.props);
   };
 
   render() {
@@ -42,14 +42,13 @@ export class FormUserDetails extends Component {
           <br />
           <Button
             variant='contained'
-            label='Continue'
             primary={true}
             style={{
               margin: theme.spacing(2, 'auto'),
               backgroundColor: theme.palette.primary.main,
               color: '#fff',
             }}
-            onclick={this.continue}
+            onClick={this.continue}
           >
             Next
           </Button>
