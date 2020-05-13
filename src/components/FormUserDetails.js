@@ -44,7 +44,7 @@ export class FormUserDetails extends Component {
             variant='contained'
             primary={true}
             style={{
-              margin: theme.spacing(2, 'auto'),
+              margin: theme.spacing(2, 1),
               backgroundColor: theme.palette.primary.main,
               color: '#fff',
             }}

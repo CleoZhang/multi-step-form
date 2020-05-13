@@ -23,6 +23,13 @@ class UserForm extends Component {
     });
   };
 
+  // Proceed to next step
+  prevStep = ({ step }) => {
+    this.setState({
+      step: step - 1,
+    });
+  };
+
   // Handle field change
   handleChange = input => e => {
     this.setState({ [input]: e.target.value });
